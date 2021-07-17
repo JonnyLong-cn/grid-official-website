@@ -125,3 +125,86 @@ header .burger {
     color: var(--text-color-lightest);
     font-size: 18px;
 }
+
+/* 关于我们 */
+.content-wrapper{
+    display: flex;
+    /* 主轴和交叉轴都居中 */
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    display: grid;
+    justify-items: center;
+    /* 设置最大宽度为1180px */
+    max-width: 1180px;
+    padding: 0 80px;
+}
+
+.title1{
+    /* “关于我们”的标题 */
+    font-size: 34px;
+    color: var(--text-color-darker);
+}
+
+.title1::after{
+    /* “关于我们”的标题的下划线 */
+    content: "";
+    display: block;
+    width: 80%;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin-top: 14px;
+    /* 向右移动10%使之居中在标题正下方 */
+    transform: translate(10%);
+}
+
+.intro{
+    /* 公司简介 */
+    margin: 28px 0 60px 0;
+    font-size: 18px;
+    color: var(--text-color-dark-gray);
+}
+
+.about-us{
+    padding-bottom: 32px;
+}
+
+.features{
+    /* 2*3布局 */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 126px 126px;
+    /* 占视图窗口的5% */
+    column-gap: 5vw;
+}
+
+.feature{
+    /* 对每一个feature块做grid布局 */
+    display: grid;
+    grid-template-areas: "icon title" "icon content";
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.feature i.fas{
+    /* 图标 */
+    grid-area: icon;
+    font-size: 34px;
+    color: var(--primary-color);
+}
+
+.feature-title{
+    /* 小标题部分 */
+    grid-area: title;
+    font-size: 18px;
+    color: var(--text-color-darker);
+}
+
+.feature-content{
+    /* 内容部分 */
+    grid-area: content;
+    color: var(--text-color-gray);
+    margin-top: 8px;
+}

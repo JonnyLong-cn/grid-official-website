@@ -8,7 +8,7 @@ glide.on(["mount.after", "run.after"], () => {
         duration: 400,
         easing: "linear",
         // 延迟从300ms开始，然后每个元素增加400ms。
-        delay: anime.stagger(400, { start: 300 }),
+        delay: anime.stagger(400, { start: 200 }),
         translateY: [anime.stagger([40, 10]), 0]
     });
 })
