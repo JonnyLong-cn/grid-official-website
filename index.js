@@ -1,3 +1,4 @@
+// glide
 const glide = new Glide('.glide');
 const captionsEl = document.querySelectorAll('.slide-caption');
 glide.on(["mount.after", "run.after"], () => {
@@ -20,3 +21,18 @@ glide.on("run.before", () => {
 })
 
 glide.mount();
+
+// isotope
+const isotope = new Isotope(".cases",{
+    layoutMode:"fitRows",
+    itemSelector:".case-item"
+});
+const filterBtns = document.querySelector(".filter-btns");
+filterBtns.addEventListener("click",e=>{
+    const filterOption = e.target.getAttribute("data-filter");
+    if(filterOption){
+        document.querySelectorAll(".filter-btn.active").forEach(btn=>btn.classList.remove("active"));
+        e.target.classList.add("active");
+        isotope.arrange({filter:filterOption});
+    }
+});
