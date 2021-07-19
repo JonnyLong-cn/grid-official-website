@@ -521,3 +521,84 @@ section {
     transform: translateY(-20px) scale(1.05);
     box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.1);
 }
+
+/* 底部信息 */
+
+footer {
+    margin-top: 124px;
+    background-color: #181818;
+    /* 让底部居中 */
+    display: grid;
+    justify-items: center;
+    padding-top: 72px;
+    padding-bottom: 24px;
+}
+
+.footer-menus {
+    width: 100%;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    padding: 0 80px;
+    position: relative;
+}
+
+.menu-title {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.contact-us {
+    justify-self: start;
+    color: var(--text-color-lightest);
+}
+
+.contact-us p:not(:first-child) {
+    /* 选中.contact-us p下除了第一个子元素 */
+    padding-bottom: 16px;
+}
+
+.menu-items li {
+    list-style: none;
+    padding-bottom: 8px;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    font-weight: 300;
+    color: var(--text-color-lightest);
+}
+
+.icp-info {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.icp-info, .rights {
+    /* 确定占用网格为1~-1，-1为最右侧 */
+    grid-column: 1 / -1;
+    /* 居中对齐 */
+    justify-self: center;
+    color: white;
+}
+
+.scroll-to-top a {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    /* 让图标上下居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 图标背景色和箭头色 */
+    background-color: var(--primary-color);
+    color: white;
+    /* 无装饰线 */
+    text-decoration: none;
+    /* 固定位置 */
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+}
