@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>龙猫科技 - 创新科技企业领军者</title>
+    <script src="./assets/static/libs/scrollReveal/scrollreveal.min.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css">
     <link rel="stylesheet" href="./assets/static/libs/glide/glide.core.min.css">
     <link rel="stylesheet" href="./assets/static/libs/glide/glide.theme.min.css">
@@ -16,12 +17,12 @@
     <header>
         <div class="logo">龙猫科技</div>
         <nav>
-            <a href="#">首页</a>
-            <a href="#">关于我们</a>
-            <a href="#">成功案例</a>
-            <a href="#">服务流程</a>
-            <a href="#">团队介绍</a>
-            <a href="#">公司动态</a>
+            <a href="#home">首页</a>
+            <a href="#about-us">关于我们</a>
+            <a href="#showcases">成功案例</a>
+            <a href="#service">服务流程</a>
+            <a href="#team-intro">团队介绍</a>
+            <a href="#company-activities">公司动态</a>
             <i class="fas fa-search"></i>
         </nav>
         <div class="burger">
@@ -30,7 +31,7 @@
             <div class="burger-line">3</div>
         </div>
     </header>
-    <div id="home" class="glide">
+    <div class="glide" id="home">
         <div class="glide__track" data-glide-el="track">
             <div class="glide__slides">
                 <!-- 轮播图一 -->
@@ -78,7 +79,7 @@
         </div>
     </div>
     <div class="content-wrapper">
-        <section class="about-us">
+        <section id="about-us" class="about-us">
             <h2 class="title1">关于我们</h2>
             <div class="intro">
                 <p>
@@ -130,7 +131,7 @@
                 </div>
             </div>
         </section>
-        <section class="showcases section-bg">
+        <section id="showcases" class="showcases section-bg">
             <h2 class="title1">成功案例</h2>
             <div class="filter-btns">
                 <button class="filter-btn active" data-filter="*">全部</button>
@@ -168,7 +169,7 @@
                 </div>
             </div>
         </section>
-        <section class="service">
+        <section id="service" class="service">
             <h2 class="title1">服务流程</h2>
             <div class="intro">
                 <p>网络综合公司，提供包括网络基础服务和网络增值服务</p>
@@ -218,7 +219,7 @@
                 </div>
             </div>
         </section>
-        <section class="team-intro section-bg">
+        <section id="team-intro" class="team-intro section-bg">
             <h2 class="title1">团队介绍</h2>
             <div class="team-members">
                 <div class="team-member">
@@ -416,6 +417,8 @@
     <script src="./assets/static/libs/anime/anime.min.js"></script>
     <!-- 轮播图 -->
     <script src="./assets/static/libs/glide/glide.min.js"></script>
+    <!-- 丝滑滑动 -->
+    <script src="./assets/static/libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
     <script src="index.js"></script>
 </body>
 

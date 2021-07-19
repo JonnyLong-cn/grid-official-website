@@ -59,6 +59,30 @@ header .burger {
     display: none;
 }
 
+header.sticky{
+    position: fixed;
+    background-color: white;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.2);
+    /* 动画 */
+    animation: dropDown 0.5s ease-in-out forwards;
+}
+
+header.sticky .logo,
+header.sticky nav a,
+header.sticky nav i{
+    color: var(--text-color-darker);
+}
+
+/* 通过@keyframes定义动作帧的起始和结束 */
+@keyframes dropDown{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
 .glide {
     position: relative;
     top: -80px;
@@ -583,7 +607,11 @@ footer {
     justify-self: center;
     color: white;
 }
-
+.scroll-to-top{
+    display: none;
+    position: relative;
+    z-index: 300;
+}
 .scroll-to-top a {
     width: 32px;
     height: 32px;
