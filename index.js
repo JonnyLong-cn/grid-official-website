@@ -99,7 +99,7 @@ const scroll = new SmoothScroll(
         offset: 50,
     }
 );
-
+// 当它开始滚动时候将open去掉
 document.addEventListener("scrollStart", () => {
     if (headerEl.classList.contains("open")) {
         headerEl.classList.remove("open");
